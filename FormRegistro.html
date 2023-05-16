@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>REGISTRO</title>
+    <script>
+      function toggleEnviar() {
+        var entregaPropietario = document.getElementById('chbEntrega1');
+        var enviarBtn = document.getElementById('enviarBtn');
+        
+        if (entregaPropietario.checked) {
+          enviarBtn.disabled = false;
+        } else {
+          enviarBtn.disabled = true;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form action="#" method="GET" name="FormDireccion" target="_blank">
+       <fieldset>
+         <legend>DIRECCION DE ENVIO</legend>
+         Calle Principal <br>
+         <input type="text" name="txtPrincipal" value="">
+         <br><br>
+         Transversal<br>
+         <input type="text" name="txtTransversal" value="">
+        
+		<br><br>
+		<input type="checkbox" name="chbEntrega1" id="chbEntrega1" value="PROPIETARIO" checked onchange="toggleEnviar()"> Entrega al propietario.<br>
+        <input type="checkbox" name="chbEntrega2" value="TERCERO"> Entrega a un tercero.
+
+         <br><br>
+         Cantones: <select name="cmbCantones">
+		      <optgroup label="PICHINCHA">
+					<option value="Quito">Quito</option>
+					<option value="Rumiñahui">Rumiñahui</option>
+					<option value="Pedro Moncayo">Pedro Moncayo</option>
+          <option value="Cayambe">Cayambe</option>
+					<option value="Mejia">Mejia</option>
+             </optgroup>
+			 
+			 <optgroup label="GUAYAS">
+        <option value="Machala">Machala</option>
+					<option value="Guayaquil">Guayaquil</option>
+          <option value="Balzar">Balzar</option>
+					<option value="Daule">Daule</option>
+					<option value="Salinas">Salinas</option>
+             </optgroup>
+			 
+         </select>
+		 
+         <br><br>
+         <input type="submit" name="SubmitDireccion" id="enviarBtn" value="ENVIAR DATOS" disabled>
+       </fieldset>
+    </form>
+	
+	<br>
+    <form action="#" method="POST" name="FormConfidencial" target="_blank">
+       <fieldset>
+         <legend>INFORMACIÓN CONFIDENCIAL</legend>
+         Código Postal: 
+         <input type="password" name="pswCodigoPostal" value="">
+         
+		 <br><br>
+         Referencia de la Dirección:<br>
+         <textarea name="Mensaje" rows="3" cols="30" id="Mensaje"></textarea><br>
+         <br>
+         <input type="submit" name="SubmitConfidencial" value="Guardar">
+       </fieldset>
+    </form>
+    <p>If you click the "Guardar" button, the form-data will be sent to a page called "/codigo-post.php"</p>
+  </body>

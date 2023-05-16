@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>Producto</title>
+  </head>
+  <body>
+    <form action="#" method="POST" name="FormProducto">
+      <fieldset>
+        <legend>Datos Básicos</legend>
+        <label for="Dato1">Nombre del Producto:</label>
+        <input id="Dato1" type="text" name="txtNombre" autofocus required>
+        <br><br>
+        <label for="Dato2">Descripción:</label>
+        <textarea id="Dato2" maxlength="50" name="txtaDescripcion" required></textarea>
+        <br><br>
+        <label for="Dato3">Foto:</label>
+        <input id="Dato3" type="file" name="foto" required>
+        <br><br>
+        <input id="Dato4" type="checkbox" name="ckboxLogistica" value="Logistica">Añadir información confidencial
+      </fieldset>
+      <br><br>
+      <fieldset>
+        <legend>Datos Económicos</legend>
+        <label for="DatoE1">Precio:</label>
+        <input id="DatoE1" type="number" min="100" max="200" required>
+        $
+        <br><br>
+        <label for="DatoE12">Impuestos:</label>
+        <select name="cmbImpuesto" id="DatoE12">
+          <option value="4">4%</option>
+          <option value="10">10%</option>
+          <option value="12">12%</option>
+          <option value="15">15%</option>
+          <option value="16">16%</option>
+        </select>
+        <br><br>
+        <label>Promoción:</label>
+        <br>
+        <input type="radio" name="rbPromocion" value="Ninguno" id="DatoE13" checked>Ninguno
+        <br>
+        <input type="radio" name="rbPromocion" value="Gratuito" id="DatoE13">Tranporte Gratuito
+        <br>
+        <input type="radio" name="rbPromocion" value="Descuento" id="DatoE13">Descuento 5%
+      </fieldset>
+      <br><br>
+      <input type="submit" name="btnGuardar" value="Guardar Cambios">
+      <input type="reset" name="btnReset" value="Borrar los datos introducidos">
+    </form>
+  </body>
+</html>
